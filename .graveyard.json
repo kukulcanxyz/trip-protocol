@@ -1,0 +1,25 @@
+{
+  "active": true,
+  "project": "trip-protocol",
+  "github_notify": ["@troopdegen"],
+  "rules": {
+    "contracts": {
+      "auto_merge": true,
+      "require_tests": true,
+      "tdd": true
+    },
+    "web": {
+      "auto_merge": false,
+      "require_review": true
+    },
+    "skill": {
+      "auto_merge": false,
+      "require_review": true
+    }
+  },
+  "guardrails": {
+    "max_concurrent_subagents": 2,
+    "stall_threshold_hours": 2,
+    "pause_on_failure": true
+  }
+}
