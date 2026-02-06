@@ -74,7 +74,8 @@ SUBSTANCE_JSON=$($CAST call "$CONTRACT" "getSubstance(uint256)((string,string,ui
 SUBSTANCE_NAME=$(echo "$SUBSTANCE_JSON" | grep -oP '(?<=\()[^,]+' | head -1 | tr -d '"')
 SUBSTANCE_TYPE=$(echo "$SUBSTANCE_JSON" | cut -d',' -f2 | tr -d ' "')
 POTENCY=$(echo "$SUBSTANCE_JSON" | cut -d',' -f3 | tr -d ' ')
-DURATION=$(echo "$SUBSTANCE_JSON" | cut -d',' -f4 | tr -d ' ')
+# Parse duration - remove scientific notation from cast output (e.g., "86400 [8.64e4]" -> "86400")
+DURATION=$(echo "$SUBSTANCE_JSON" | cut -d',' -f4 | tr -d ' ' | sed 's/\[.*\]//')
 
 log "Substance: $SUBSTANCE_NAME (type: $SUBSTANCE_TYPE, potency: $POTENCY, duration: ${DURATION}s)"
 

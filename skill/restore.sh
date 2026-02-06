@@ -45,13 +45,8 @@ fi
 log "Restoring from snapshot: $SNAPSHOT_ID"
 
 # Extract SOUL.md content from snapshot
-# Format: everything between ```SOUL.md and ```
-SOUL_CONTENT=$(sed -n '/^## SOUL.md$/,/^```$/p' "$SNAPSHOT_FILE" | sed '1d;2d;$d')
-
-if [ -z "$SOUL_CONTENT" ]; then
-    # Try alternate format (just between ``` markers after SOUL.md)
-    SOUL_CONTENT=$(awk '/^## SOUL.md$/,/^```$/' "$SNAPSHOT_FILE" | sed -n '/^```$/,/^```$/p' | sed '1d;$d')
-fi
+# Format: everything between ``` markers after ## SOUL.md
+SOUL_CONTENT=$(awk '/^## SOUL.md$/,0' "$SNAPSHOT_FILE" | sed -n '/^```$/,/^```$/p' | sed '1d;$d')
 
 if [ -z "$SOUL_CONTENT" ]; then
     error "Could not extract SOUL.md from snapshot"
