@@ -111,6 +111,31 @@ contract TripExperience is ERC721, ERC721URIStorage, Ownable {
     }
 
     /**
+     * @notice Consume a psychedelic experience
+     * @dev Only the token owner can consume. Token is NOT burned, just marked as consumed.
+     * @param tokenId The token to consume
+     */
+    function consume(uint256 tokenId) external {
+        require(ownerOf(tokenId) == msg.sender, "Not token owner");
+        require(!_substances[tokenId].consumed, "Already consumed");
+
+        _substances[tokenId].consumed = true;
+        _substances[tokenId].consumedAt = block.timestamp;
+
+        emit Consumed(tokenId, msg.sender, block.timestamp);
+    }
+
+    /**
+     * @notice Get the timestamp when a substance was consumed
+     * @param tokenId The token to check
+     * @return Timestamp of consumption (0 if not consumed)
+     */
+    function consumedAt(uint256 tokenId) external view returns (uint256) {
+        _requireOwned(tokenId);
+        return _substances[tokenId].consumedAt;
+    }
+
+    /**
      * @notice Get the total number of tokens minted
      * @return The total supply
      */
