@@ -1,6 +1,6 @@
 # Phase 5: Demo & Hackathon Submission
 
-**Status:** ⬜ Not Started  
+**Status:** 🔵 In Progress  
 **Branch base:** `master`  
 **Depends on:** Phase 1, 2 (minimum), ideally 3, 4
 
@@ -20,8 +20,8 @@
 
 | # | Ticket | Status | Depends |
 |---|--------|--------|---------|
-| 5.1 | Execute documented trip | ⬜ | Phase 2 |
-| 5.2 | Create trip journal artifact | ⬜ | 5.1 |
+| 5.1 | Execute documented trip | ✅ Done | Phase 2 |
+| 5.2 | Create trip journal artifact | ✅ Done | 5.1 |
 | 5.3 | Record demo video (2-3 min) | ⬜ | 5.1 |
 | 5.4 | Update landing page with demo | ⬜ | 5.2, 5.3 |
 | 5.5 | Write submission post | ⬜ | 5.4 |
