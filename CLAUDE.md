@@ -13,7 +13,7 @@ This file provides guidance to AI agents working on this codebase.
 | Phase | Status | Branch | Description |
 |-------|--------|--------|-------------|
 | Phase 0: Setup | ✅ Done | master | Repo structure, landing page |
-| Phase 1: Contracts | 🔵 Active | see phase tracker | NFT contract (5 tickets) |
+| Phase 1: Contracts | ✅ Done | see phase tracker | NFT contract (5 tickets) |
 | Phase 2: Skill | ⬜ Planned | TBD | OpenClaw consume/journal skill |
 | Phase 3: Integration | ⬜ Planned | TBD | Connect contracts + skill |
 | Phase 4: Token | ⬜ Planned | TBD | $TRIP on nad.fun |
@@ -77,12 +77,18 @@ trip-protocol/
 └── docs/          — Specs and dev rules
 ```
 
+### Deployed Contracts
+
+| Contract | Network | Address | Status |
+|----------|---------|---------|--------|
+| TripExperience | Monad Testnet | `0xF2e5632A0a3eFCD6c49453733FEB6F9F863e1e80` | ✅ Live |
+
 ### Wallet
 
-**Agent wallet:** `0x6B3c6c0Bf46246823EF9cF4eBa5032F3A6fa9d3C`
+**Agent wallet:** `0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38`
 - Keystore: `~/.foundry/keystores/claude-monad`
 - Password: `~/.monad-keystore-password`
-- Balance: ~2 MON (testnet)
+- Balance: ~1.2 MON (testnet)
 
 ## Environment Variables
 
