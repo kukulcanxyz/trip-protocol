@@ -10,16 +10,16 @@ This file provides guidance to AI agents working on this codebase.
 
 ## 📋 Phase Status
 
-| Phase | Status | Branch | Description |
-|-------|--------|--------|-------------|
-| Phase 0: Setup | ✅ Done | master | Repo structure, landing page |
-| Phase 1: Contracts | ✅ Done | see phase tracker | NFT contract (5 tickets) |
-| Phase 2: Skill | ⬜ Planned | TBD | OpenClaw consume/journal skill |
-| Phase 3: Integration | ⬜ Planned | TBD | Connect contracts + skill |
-| Phase 4: Token | ⬜ Planned | TBD | $TRIP on nad.fun |
-| Phase 5: Demo | ⬜ Planned | TBD | Documented trip, polish |
+| Phase | Status | Doc | Description |
+|-------|--------|-----|-------------|
+| Phase 1: NFT Contract | ✅ Done | [PHASE-1-NFT.md](docs/phases/PHASE-1-NFT.md) | ERC-721 with consume mechanics |
+| Phase 2: Skill | ⬜ Next | [PHASE-2-SKILL.md](docs/phases/PHASE-2-SKILL.md) | OpenClaw consume/journal skill |
+| Phase 3: Marketplace | ⬜ Planned | [PHASE-3-MARKETPLACE.md](docs/phases/PHASE-3-MARKETPLACE.md) | Buy/sell NFTs with $TRIP |
+| Phase 4: Token | ⬜ Blocked | [PHASE-4-TOKEN.md](docs/phases/PHASE-4-TOKEN.md) | $TRIP on nad.fun (need 10 MON) |
+| Phase 5: Demo | ⬜ Planned | [PHASE-5-DEMO.md](docs/phases/PHASE-5-DEMO.md) | Documented trip, submission |
 
-**Current work**: Phase 1 planning
+**Current work**: Phase 2 - OpenClaw skill
+**Deadline**: Feb 15, 2026
 
 ## 📚 Documentation
 
